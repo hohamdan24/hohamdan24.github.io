@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+   function validateForm() {
+    try {
+        let fullName = document.getElementById("fullName").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let country = document.getElementById("country").value;
+        let comments = document.getElementById("comments").value.trim();
+
+        if (fullName === "" || email === "" || country === "" || comments === "") {
+            throw new Error("Please fill in all fields before submitting.");
+        }
+
+        alert("Form submitted successfully!");
+        return true; 
+    } catch (err) {
+        alert(err.message);
+        return false;
+    }}
+;
+</script>
+</head>
+<body>
+    
+<ul>
+    <li><a href="C:\Users\Home\Desktop\university\webApp\assignment1\Home.html">Home</a></li>
+    <li><a href="C:\Users\Home\Desktop\university\webApp\assignment1\Contact Me.html">Contact Me</a></li>
+    <li><a href="C:\Users\Home\Desktop\university\webApp\assignment1\Certifications.html">Certifications</a></li>
+</ul>
+<form method="post" action="" onsubmit="return validateForm();">
+ <label>Full Name:</label>
+ <input type="text" name="fullName" id="fullName" ><br><br>
+
+ <label>Email:</label>
+ <input type="email" name="email" id="email" placeholder="example@domain.com" ><br><br>
+    <label>Country:</label><br>
+    <select name="country" id="country" >
+        <option value="usa">United States</option>
+        <option value="canada">Canada</option>
+        <option value="uk">United Kingdom</option>
+        <option value="Jordan">Jordan</option>
+        <option value="palestine">Palestine</option>
+        <option value="Syria">Syria</option>
+    </select><br><br>
+    <textarea name="comments" id="comments" rows="5" cols="30" placeholder="Your message here..." ></textarea><br><br>
+    <button type="submit">Submit</button>
+
+
+</form>
+<style>
+body {
+    background-color: #f9f9f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+    background-color: #2c3e50;
+    padding: 12px 20px;
+    margin: 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+ul li a:hover {
+    color: #3498db;
+}
+
+form {
+    margin: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input[type="text"], 
+input[type="email"], 
+select, 
+textarea {
+    width: 40%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+</style>
+</body>
+</html>
