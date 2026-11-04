@@ -15,10 +15,10 @@
         }
 
         alert("Form submitted successfully!");
-
+        return true;
     } catch (err) {
         alert(err.message);
-    
+        return false;
     }}
 ;
 </script>
@@ -30,7 +30,7 @@
     <li><a href="ContactMe.html">Contact Me</a></li>
     <li><a href="Certifications.html">Certifications</a></li>
 </ul>
-<form method="post"  onsubmit="validateForm();">
+<form method="get"  onsubmit="return validateForm();">
  <label>Full Name:</label>
  <input type="text" name="fullName" id="fullName" ><br><br>
 
