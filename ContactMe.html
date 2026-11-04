@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <script>
    function validateForm(event) {
+           event.preventDefault();
     try {
         let fullName = document.getElementById("fullName").value.trim();
         let email = document.getElementById("email").value.trim();
@@ -15,11 +16,11 @@
         }
 
         alert("Form submitted successfully!");
-        return true;
+        
     } catch (err) {
         alert(err.message);
-        event.preventDefault();
-        return false;
+    
+    
     }}
 ;
 </script>
@@ -31,7 +32,7 @@
     <li><a href="ContactMe.html">Contact Me</a></li>
     <li><a href="Certifications.html">Certifications</a></li>
 </ul>
-<form  onsubmit="return validateForm(event);">
+<form  onsubmit=" validateForm(event);">
  <label>Full Name:</label>
  <input type="text" name="fullName" id="fullName" ><br><br>
 
